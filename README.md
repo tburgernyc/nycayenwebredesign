@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nycayen Moore Hair Artistry
+
+A luxury, neumorphism-themed marketing website for Nycayen Moore Hair Artistry, built with Next.js 16, Tailwind CSS 4, and Motion.
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Motion](https://motion.dev/) (formerly Framer Motion)
+- **Linting**: ESLint
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+
+- npm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/nycayen-web-redesign.git
+   cd nycayen-web-redesign
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Set up environment variables:
+   - Copy `env.example` to `.env`:
+     ```bash
+     cp env.example .env
+     ```
+   - Update `.env` with your actual keys (optional for local dev).
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Runs ESLint to check for code quality issues.
+- `npm run typecheck`: Runs TypeScript compiler check.
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/`: Next.js App Router pages and layouts.
+  - `(site)/`: Route group for the main site.
+    - `components/`: Shared UI components (Button, NeumoCard, etc.).
+    - `sections/`: Page sections (Hero, Services, Portfolio, etc.).
+  - `api/`: Server-side API routes.
+  - `globals.css`: Global styles and Tailwind configuration.
+- `components/ui/`: Generic UI components.
+- `lib/`: Utility functions (analytics, etc.).
+- `public/`: Static assets (images, icons).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- **Neumorphism Design**: Custom shadow tokens and utility classes for a soft, tactile feel.
+- **Responsive Layout**: Mobile-first design that adapts to all screen sizes.
+- **Interactivity**:
+  - Sticky navigation with smooth scrolling.
+  - Portfolio filtering and image modal.
+  - Contact form with server-side handling stub.
+- **Animations**: Subtle entrance and scroll animations using Motion.
+- **Accessibility**: Semantic HTML, ARIA attributes, and focus management.
+
+## Deployment
+
+This project is optimized for deployment on [Vercel](https://vercel.com/).
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fnycayen-web-redesign)
+
+1. Push your code to a Git repository (GitHub, GitLab, Bitbucket).
+2. Import the project into Vercel.
+3. Set the environment variables in Vercel project settings.
+4. Deploy!
+
+See `DEPLOYMENT_CHECKLIST.md` for a pre-launch checklist.
